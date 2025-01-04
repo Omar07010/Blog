@@ -1,0 +1,15 @@
+<a href="/edit-post">&larr; black</a>
+<div class="admin-title">
+  <h2>Update Post</h2>
+</div>
+
+
+<form action="/edit-post/<%= post._id %>?_method=PUT" method="POST">
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Post Title" name="title" value="<%= post.title %>">
+      
+    <label for="body"><b>Content</b></label>
+    <textarea name="body" cols="150" rows="10"><%= post.body %></textarea>
+  
+    <input type="submit" value="Update" class="btn">
+</form>
